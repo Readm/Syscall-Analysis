@@ -52,7 +52,7 @@ class SysCall(object):
             f.write('\n')
 
     @classmethod
-    def read_json(self, path = 'syscalls.json'):
+    def read_json(cls, path = 'syscalls.json'):
         try:
             with open(path,'r') as f:
                 retlst=[]
