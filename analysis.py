@@ -23,6 +23,16 @@ class Code_Block(list):
                 return i
         return None
 
+    @property
+    def last_instruction(self):
+        return self.[-1].ins
+
+    @property
+    def rax_sorce(self):
+        pass
+
+    #def trace_back(self, reg, ):
+
 
 Blocks=[]
 
