@@ -52,7 +52,7 @@ class SysCall(object):
             f.write('\n')
 
     @classmethod
-    def read_json(self, path = 'syscalls.json'):
+    def read_json(cls, path = 'syscalls.json'):
         try:
             with open(path,'r') as f:
                 retlst=[]
@@ -77,10 +77,11 @@ class SysCall(object):
     @property
     def used_reg(self):
         return [i[0] for i in self.args]
-
+'''
 a=SysCall.read_json()
 for i in a:
     if i.args_number == 6:
         print i.rax
         print i.used_reg
 print 'max regs', max([i.args_number for i in a])
+'''
