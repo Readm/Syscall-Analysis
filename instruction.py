@@ -2,23 +2,24 @@
 # coding:utf-8
 
 registers = [
-'rax', 'eax', 'ax', 'al'
-, 'rbx', 'ebx', 'bx', 'bl'
-, 'rcx', 'ecx', 'cx', 'cl'
-, 'rdx', 'edx', 'dx', 'dl'
-, 'rsi', 'esi', 'si', 'sil'
-, 'rdi', 'edi', 'di', 'dil'
-, 'rbp', 'ebp', 'bp', 'bpl'
-, 'rsp', 'esp', 'sp', 'spl'
-, 'r8', 'r8d', 'r8w', 'r8b'
-, 'r9', 'r9d', 'r9w', 'r9b'
-, 'r10', 'r10d', 'r10w', 'r10b'
-, 'r11', 'r11d', 'r11w', 'r11b'
-, 'r12', 'r12d', 'r12w', 'r12b'
-, 'r13', 'r13d', 'r13w', 'r13b'
-, 'r14', 'r14d', 'r14w', 'r14b'
-, 'r15', 'r15d', 'r15w', 'r15b'
+    'rax', 'eax', 'ax', 'al',
+    'rbx', 'ebx', 'bx', 'bl',
+    'rcx', 'ecx', 'cx', 'cl',
+    'rdx', 'edx', 'dx', 'dl',
+    'rsi', 'esi', 'si', 'sil',
+    'rdi', 'edi', 'di', 'dil',
+    'rbp', 'ebp', 'bp', 'bpl',
+    'rsp', 'esp', 'sp', 'spl',
+    'r8', 'r8d', 'r8w', 'r8b',
+    'r9', 'r9d', 'r9w', 'r9b',
+    'r10', 'r10d', 'r10w', 'r10b',
+    'r11', 'r11d', 'r11w', 'r11b',
+    'r12', 'r12d', 'r12w', 'r12b',
+    'r13', 'r13d', 'r13w', 'r13b',
+    'r14', 'r14d', 'r14w', 'r14b',
+    'r15', 'r15d', 'r15w', 'r15b'
 ]
+
 
 class Instruction(str):
     '''
@@ -54,7 +55,7 @@ class Instruction(str):
     'eax'
     '''
 
-    def __init__(self, str):
+    def __init__(self, string):
         super(Instruction, self).__init__()
 
     @property
@@ -64,21 +65,23 @@ class Instruction(str):
 
     @property
     def ip(self):
-        return int(self.split()[0],16)
+        return int(self.split()[0], 16)
+
     @property
     def eip(self):
         return self.ip
+
     @property
     def rip(self):
         return self.ip
 
     @property
     def disas(self):
-        return self.split(' ',1)[1].strip()
+        return self.split(' ', 1)[1].strip()
 
     @property
     def ins(self):
-        if len(self.split())<2: return ''
+        if len(self.split()) < 2: return ''
         return self.split()[1]
 
     @property
@@ -94,23 +97,25 @@ class Instruction(str):
 
     @property
     def in_order(self):
-        return not self.type in ['jmp','call','ret']
+        return not self.type in ['jmp', 'call', 'ret']
 
     @property
     def dest(self):
         if ',' in self.disas:
             return self.split(',')[-1].strip()
+
     @property
     def src(self):
         if ',' in self.disas:
             return ' '.join(self.disas.split(',')[0].split()[1:])
 
-        return not self.type in ['jmp','call','ret']
+        return not self.type in ['jmp', 'call', 'ret']
 
     @property
     def full_src(self):
         if ',' in self.disas:
             return self.split(',')[-1].strip()
+
     @property
     def full_dest(self):
         if ',' in self.disas:
@@ -125,13 +130,13 @@ class Instruction(str):
             return 'stack'
         if self.type == 'push':
             return self.split()[-1]
+
     @property
     def src(self):
         if self.type == 'xor' and self._src == self.dest:
             return '0x0'
         else:
             return self._src
-
 
     @property
     def dest(self):
@@ -145,6 +150,8 @@ class Instruction(str):
 
     @staticmethod
     def data_type(data):
+        if data == None:
+            return None
         if data in registers:
             return 'register'
         if data in ['stack']:
@@ -155,7 +162,7 @@ class Instruction(str):
             else:
                 return 'memory'
         try:
-            _ = int(data,16)
+            _ = int(data, 16)
             return 'immediate'
         except:
             return None
@@ -163,9 +170,10 @@ class Instruction(str):
     @staticmethod
     def reg_type(reg):
         if reg in registers:
-            return registers[registers.index(reg)/4*4]
+            return registers[registers.index(reg) / 4 * 4]
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     import doctest
+
     doctest.testmod()
