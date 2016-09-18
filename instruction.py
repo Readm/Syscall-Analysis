@@ -1,6 +1,25 @@
 #! /usr/bin/python
 # coding:utf-8
 
+registers = [
+'rax', 'eax', 'ax', 'al'
+, 'rbx', 'ebx', 'bx', 'bl'
+, 'rcx', 'ecx', 'cx', 'cl'
+, 'rdx', 'edx', 'dx', 'dl'
+, 'rsi', 'esi', 'si', 'sil'
+, 'rdi', 'edi', 'di', 'dil'
+, 'rbp', 'ebp', 'bp', 'bpl'
+, 'rsp', 'esp', 'sp', 'spl'
+, 'r8', 'r8d', 'r8w', 'r8b'
+, 'r9', 'r9d', 'r9w', 'r9b'
+, 'r10', 'r10d', 'r10w', 'r10b'
+, 'r11', 'r11d', 'r11w', 'r11b'
+, 'r12', 'r12d', 'r12w', 'r12b'
+, 'r13', 'r13d', 'r13w', 'r13b'
+, 'r14', 'r14d', 'r14w', 'r14b'
+, 'r15', 'r15d', 'r15w', 'r15b'
+]
+
 class Instruction(str):
     '''
     Simple instruction class, format sensitive
@@ -26,10 +45,22 @@ class Instruction(str):
     'jmp'
     >>> b.in_order
     False
+    >>> Instruction.reg_type('spl')
+    'rsp'
+    >>> c=Instruction('0x00007ff308c780da   xor eax, eax\\n')
+    >>> c.src
+    '0x0'
+    >>> c.dest
+    'eax'
     '''
 
     def __init__(self, str):
         super(Instruction, self).__init__()
+
+    @property
+    def unresolved(self):
+        return not self.type in {'jmp', 'call', 'mov', 'or', 'xor', 'nop', 'test', 'syscall', 'pop', 'push', 'cld',
+                                 'add', 'sub', 'cmp', 'and', 'lea', 'pushfq', 'lahf', 'set', 'shr', 'shl', 'neg'}
 
     @property
     def ip(self):
@@ -56,6 +87,8 @@ class Instruction(str):
             return 'jmp'
         elif self.ins.startswith('mov'):
             return 'mov'
+        elif self.ins.startswith('set'):
+            return 'set'
         else:
             return self.ins
 
@@ -84,14 +117,53 @@ class Instruction(str):
             return ' '.join(self.disas.split(',')[0].split()[1:])
 
     @property
-    def src(self):
+    def _src(self):
         if ',' in self.disas:
-            return self.split(',')[-1].split()[-1]
+            if self.type not in ['cmp', 'test', 'neg', 'or', 'add']:
+                return self.split(',')[-1].split()[-1]
+        if self.type == 'pop':
+            return 'stack'
+        if self.type == 'push':
+            return self.split()[-1]
+    @property
+    def src(self):
+        if self.type == 'xor' and self._src == self.dest:
+            return '0x0'
+        else:
+            return self._src
+
+
     @property
     def dest(self):
         if ',' in self.disas:
-            return self.disas.split(',')[0].split()[-1]
+            if self.type not in ['cmp', 'test', 'neg', 'or', 'add']:
+                return self.disas.split(',')[0].split()[-1]
+        if self.type == 'push':
+            return 'stack'
+        if self.type == 'pop':
+            return self.split()[-1]
 
+    @staticmethod
+    def data_type(data):
+        if data in registers:
+            return 'register'
+        if data in ['stack']:
+            return 'stack'
+        if '[' in data:
+            if 'sp' in data:
+                return 'stack'
+            else:
+                return 'memory'
+        try:
+            _ = int(data,16)
+            return 'immediate'
+        except:
+            return None
+
+    @staticmethod
+    def reg_type(reg):
+        if reg in registers:
+            return registers[registers.index(reg)/4*4]
 
 
 if __name__=='__main__':
