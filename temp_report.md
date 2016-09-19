@@ -99,7 +99,7 @@ Args source distance(max)
 18	5
 19	45
 
-Ares source last assignment(max)
+Args source last assignment(max)
 1	1
 2	6
 3	17

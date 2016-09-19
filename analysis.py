@@ -135,4 +135,4 @@ print 'Not order after rax assignment\n',Counter([i.not_order_after_rax_assignme
 print 'Rax data\n',Counter([i.rax_data for i in Blocks]).dump_text()
 print 'Syscall name\n',Counter([i.syscall.name for i in Blocks]).dump_text()
 print 'Args source distance(max)\n',Counter([i.args_source_distance for i in Blocks]).dump_text()
-print 'Ares source last assignment(max)\n',Counter([i.args_last_assignment for i in Blocks]).dump_text()
+print 'Args source last assignment(max)\n',Counter([i.args_last_assignment for i in Blocks]).dump_text()
