@@ -1,7 +1,7 @@
 #! /usr/bin/python
 # coding:utf-8
 from instruction import Instruction
-from counter import Counter
+from collections import Counter
 from syscall_list.syscall_list import SysCall
 
 __all__ = ['CodeBlock']
@@ -126,13 +126,13 @@ print "Sample: ", path
 print 'Block numbers',len(Blocks)
 print ''
 
-print 'Last not order type\n',Counter([i.last_not_order_type for i in Blocks]).dump_text()
-print 'Last order length\n',Counter([i.last_order_len for i in Blocks]).dump_text()
-print 'Rax source\n',Counter([i.rax_source for i in Blocks]).dump_text()
-print 'Rax source distance\n',Counter([i.rax_source_distance for i in Blocks]).dump_text()
-print 'Rax last assignment\n',Counter([i.rax_last_assignment for i in Blocks]).dump_text()
-print 'Not order after rax assignment\n',Counter([i.not_order_after_rax_assignment for i in Blocks]).dump_text()
-print 'Rax data\n',Counter([i.rax_data for i in Blocks]).dump_text()
-print 'Syscall name\n',Counter([i.syscall.name for i in Blocks]).dump_text()
-print 'Args source distance(max)\n',Counter([i.args_source_distance for i in Blocks]).dump_text()
-print 'Args source last assignment(max)\n',Counter([i.args_last_assignment for i in Blocks]).dump_text()
+print 'Last not order type\n',Counter([i.last_not_order_type for i in Blocks])
+print 'Last order length\n',Counter([i.last_order_len for i in Blocks])
+print 'Rax source\n',Counter([i.rax_source for i in Blocks])
+print 'Rax source distance\n',Counter([i.rax_source_distance for i in Blocks])
+print 'Rax last assignment\n',Counter([i.rax_last_assignment for i in Blocks])
+print 'Not order after rax assignment\n',Counter([i.not_order_after_rax_assignment for i in Blocks])
+print 'Rax data\n',Counter([i.rax_data for i in Blocks])
+print 'Syscall name\n',Counter([i.syscall.name for i in Blocks])
+print 'Args source distance(max)\n',Counter([i.args_source_distance for i in Blocks])
+print 'Args source last assignment(max)\n',Counter([i.args_last_assignment for i in Blocks])
