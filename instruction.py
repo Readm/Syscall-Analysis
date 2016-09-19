@@ -1,6 +1,7 @@
 #! /usr/bin/python
 # coding:utf-8
 
+__all__ = ['Instruction']
 registers = [
     'rax', 'eax', 'ax', 'al',
     'rbx', 'ebx', 'bx', 'bl',
@@ -61,7 +62,13 @@ class Instruction(str):
     @property
     def unresolved(self):
         return not self.type in {'jmp', 'call', 'mov', 'or', 'xor', 'nop', 'test', 'syscall', 'pop', 'push', 'cld',
-                                 'add', 'sub', 'cmp', 'and', 'lea', 'pushfq', 'lahf', 'set', 'shr', 'shl', 'neg'}
+                                 'add', 'sub', 'cmp', 'and', 'lea', 'pushfq', 'lahf', 'set', 'shr', 'shl', 'neg', 'ret',
+                                 'not', 'mov', 'cdqe', 'cwde', 'cbw', 'dec'}
+
+    @property
+    def prefix(self):
+        if self.disas.split()[0] in ['bnd']:
+            return self.disas.split()
 
     @property
     def ip(self):
@@ -82,13 +89,16 @@ class Instruction(str):
     @property
     def ins(self):
         if len(self.split()) < 2: return ''
-        return self.split()[1]
+        if self.prefix:
+            return self.split()[2]      #if exception here, a instruction has only prefix, data bug.
+        else:
+            return self.split()[1]
 
     @property
     def type(self):
         if self.ins.startswith('j'):
             return 'jmp'
-        elif self.ins.startswith('mov'):
+        elif self.ins.startswith('mov') or self.ins[1:].startswith('mov'):
             return 'mov'
         elif self.ins.startswith('set'):
             return 'set'

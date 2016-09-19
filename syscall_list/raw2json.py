@@ -10,7 +10,8 @@ with open('raw.txt') as f:
     data = f.readlines()
 
 for i in range(314):  # tested ok
-    if not data[i * 3].startswith(str(i)): print 'wrong i', i
+    if not data[i * 3].startswith(str(i)):
+        print 'wrong i', i
     if data[i * 3 + 1].startswith(str(i + 1)):
         data.insert(i * 3 + 1, '')
         data.insert(i * 3 + 1, '')

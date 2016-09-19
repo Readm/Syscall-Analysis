@@ -3,6 +3,8 @@
 
 import json
 
+__all__=['SysCall']
+
 
 class SysCall(object):
     def __init__(self, rax, name='', entry='', implementation='', args=[], architecture='amd64'):

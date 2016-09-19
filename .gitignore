@@ -1,4 +1,4 @@
 .idea/*
-.tmp/*
+data/*
 *.py[cod]
 *~
