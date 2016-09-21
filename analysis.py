@@ -11,8 +11,9 @@ syscalls = []
 class CodeBlock(list):
     def __init__(self, codes, syscall_num=-1):
         '''codes should be list of str, each for a line'''
+        self.syscall_num = syscall_num
+        self.path = ''
         for i in codes:
-            self.syscall_num = syscall_num
             self.append(Instruction(i))
             if self[-1].unresolved:
                 if self[-1].disas:
@@ -61,6 +62,7 @@ class CodeBlock(list):
 
     def trace_back(self, reg, fuzzy=True):  # only in regs route
         origin = reg
+        i = -1
         if fuzzy:
             for i in range(len(self)):
                 if Instruction.reg_type(self[-1 - i].dest) == Instruction.reg_type(reg):
@@ -135,8 +137,14 @@ class CodeBlock(list):
 
             tmp = []
             syscall_num = -1
+            line_number=0
             while True:
+                line_number+=1
                 line = f.readline()
+                if line and not (line.startswith('ip') or line.startswith('0x')):
+                    print "warring: wrong line:"
+                    print 'file:', path
+                    print 'line:', line_number
                 if line.startswith('ip'):
                     Blocks.append(CodeBlock(tmp))
                     Blocks[-1].syscall_num = syscall_num
@@ -149,6 +157,8 @@ class CodeBlock(list):
                 else:
                     tmp.append(line)
             del Blocks[0]
+        for i in Blocks:
+            i.path = path
         return Blocks
 
 
@@ -183,21 +193,52 @@ class Record(object):
         print 'Args source distance(max)\n',Counter([i.args_source_distance for i in self.Blocks])
         print 'Args source last assignment(max)\n',Counter([i.args_last_assignment for i in self.Blocks])
 
-if __name__ == '__main__':
+def fix_202_problem_in_fail():
     import os
-    test = ''
+    for i in os.listdir('data/fail'):
+        with open('data/fail/'+str(i), 'r') as f:
+            lines = f.readlines()
+            for j in lines:
+                if j.startswith('ip') and 'x' in j.split(':')[-1]:
+                    print 'file', i, 'line', lines.index(j)
 
-    if test:
-        a = Record(test)
-        a.test()
-        exit()
-
-
-    for i in os.listdir('data'):
+def select_and_move(path):
+    import os, shutil
+    select_path = path
+    for i in os.listdir(select_path):
         if not str(i).endswith('outmap.out'):
             if str(i) not in ['good', 'ins', 'fail']:
-                print '\n\n\nTesting...', str(i)
-                a = Record('data/'+str(i))
-                a.test_good()
-                _ = raw_input('Good? Ins? Fail?')
+                print '================================================================================'
+                print 'Testing...', str(i)
+                try:
+                    a = Record(select_path+str(i))
+                    a.test_good()
+                    c = raw_input('>>>>>Good(Enter)? Ins? Fail? Delete? Remain?')
+                    if not c:
+                        shutil.move(select_path+str(i),'data/good/'+str(i))
+                        print "Good!"
+                    elif c.startswith('i'):
+                        shutil.move(select_path+str(i),'data/ins/'+str(i))
+                        print "Ins!"
+                    elif c.startswith('f'):
+                        shutil.move(select_path+str(i),'data/fail/'+str(i))
+                        print "Fail!"
+                    elif c.startswith('d'):
+                        os.remove(select_path+str(i))
+                        print "Delete!"
+                    else:
+                        print "Remain!"
+                except:
+                    shutil.move(select_path+str(i),'data/fail/'+str(i))
 
+def move_map_to(path):
+    import os, shutil
+    for i in os.listdir(path):
+        map_file = '.'.join(str(i).split('.')[:-1])+'.outmap.out'
+        if map_file in os.listdir('data'):
+            shutil.move('data/'+map_file, path)
+
+if __name__ == '__main__':
+    import os, shutil
+
+    move_map_to('data/good/')

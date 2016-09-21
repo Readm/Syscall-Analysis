@@ -21,7 +21,7 @@ registers = [
     'r15', 'r15d', 'r15w', 'r15b'
 ]
 
-not_move_list = ['cmp', 'test', 'neg', 'or', 'add', 'sar', 'bsr']
+not_move_list = ['cmp', 'test', 'neg', 'or', 'add', 'sar', 'bsr', 'ror', 'rol', 'pxor', 'pshufd']
 
 class Instruction(str):
     '''
@@ -62,9 +62,17 @@ class Instruction(str):
 
     @property
     def unresolved(self):
-        return not self.type in {'jmp', 'call', 'mov', 'or', 'xor', 'nop', 'test', 'syscall', 'pop', 'push', 'cld',
+        _tmp1 = self.type
+        if self.type.startswith('p'):
+            _tmp0 = self.type[1:]
+        else:
+            _tmp0 = _tmp1
+        solved = {'jmp', 'call', 'mov', 'or', 'xor', 'nop', 'test', 'syscall', 'pop', 'push', 'cld',
                                  'add', 'sub', 'cmp', 'and', 'lea', 'pushfq', 'lahf', 'set', 'shr', 'shl', 'neg', 'ret',
-                                 'not', 'mov', 'cdqe', 'cwde', 'cbw', 'dec', 'div', 'sar', 'bsf', 'rep', 'xchg', 'sbb'}
+                                 'not', 'mov', 'cdqe', 'cwde', 'cbw', 'dec', 'div', 'sar', 'bsf', 'rep', 'repne',
+                                 'xchg', 'sbb', 'scasb', 'vzeroupper', 'mul', 'subb', 'inc', 'pshufd', 'unpcklbw',
+                                 'rdtsc', 'ror', 'data16', 'rol', 'xadd'}
+        return (_tmp0 not in solved) and (_tmp1 not in solved)
 
     @property
     def prefix(self):
@@ -106,7 +114,7 @@ class Instruction(str):
             return 'mov'
         elif self.ins.startswith('set'):
             return 'set'
-        elif self.ins.startswith('cmp'):
+        elif self.ins.startswith('cmp') or self.ins[1:].startswith('cmp'):
             return 'cmp'
         else:
             return self.ins
