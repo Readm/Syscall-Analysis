@@ -13,6 +13,7 @@ class CodeBlock(list):
         '''codes should be list of str, each for a line'''
         self.syscall_num = syscall_num
         self.path = ''
+        self.rax_not_match_recorded = False
         for i in codes:
             self.append(Instruction(i))
             if self[-1].unresolved:
@@ -20,6 +21,10 @@ class CodeBlock(list):
                     print "warn: unresolved instruction", self[-1].disas
                 else:
                     print "warn: unresolved instruction Empty", self[-1]
+
+    @property
+    def entry(self):
+        return self[-1].disas
 
     @property
     def last_not_order_type(self):
@@ -48,8 +53,12 @@ class CodeBlock(list):
         eax = self.trace_back('eax')[0]
         if Instruction.data_type(eax)!='immediate': return Instruction.data_type(eax)
         if int(eax,16)!=self.syscall_num:
-            print 'Warn: wrong eax trace back. eax:', eax,'real:', self.syscall_num
-            print self
+            if not self.rax_not_match_recorded:
+                with open('reports/exceptions/rax_not_match.txt', 'a+') as f:
+                    f.write('path='+self.path+'\n')
+                    f.writelines(self)
+                print 'Warn: wrong eax trace back. eax:', eax,'real:', self.syscall_num
+                self.rax_not_match_recorded = True
         return self.trace_back('eax')[0]
 
     @property
@@ -136,15 +145,21 @@ class CodeBlock(list):
         with open(path, 'r') as f:
 
             tmp = []
+            wrong_block = set([])
             syscall_num = -1
-            line_number=0
+            line_number = 0
+
             while True:
                 line_number+=1
                 line = f.readline()
                 if line and not (line.startswith('ip') or line.startswith('0x')):
+                    with open('reports/exceptions/wrong_line.txt', 'a+') as f:
+                        f.write('path='+path+'\n')
+                        f.write('line='+str(line_number)+'\n')
                     print "warring: wrong line:"
                     print 'file:', path
                     print 'line:', line_number
+                    wrong_block.add(len(Blocks))
                 if line.startswith('ip'):
                     Blocks.append(CodeBlock(tmp))
                     Blocks[-1].syscall_num = syscall_num
@@ -156,16 +171,34 @@ class CodeBlock(list):
                     break
                 else:
                     tmp.append(line)
+
+            for i in range(len(wrong_block)):
+                del Blocks[wrong_block[0]]
+                wrong_block.remove(wrong_block[0])
+                for j in range(len(wrong_block)):
+                    wrong_block[j] = wrong_block[j]-1
+
             del Blocks[0]
         for i in Blocks:
             i.path = path
         return Blocks
 
+Clnot=Counter()
+Clol=Counter()
+Crs=Counter()
+Crsd=Counter()
+Crla=Counter()
+Cnoara=Counter()
+Crd=Counter()
+Csy=Counter()
+Casla=Counter()
+Ce=Counter()
 
 class Record(object):
     def __init__(self, path):
         self.path = path
         self.Blocks = CodeBlock.read_file(path)
+        #self.Maps =
 
     def test_good(self):
         print "Sample: ", self.path
@@ -175,7 +208,6 @@ class Record(object):
         print 'Rax source\n',Counter([i.rax_source for i in self.Blocks])
         print 'Syscall name\n',Counter([i.syscall.name for i in self.Blocks])
         print 'Args source distance(max)\n',Counter([i.args_source_distance for i in self.Blocks])
-
 
     def analysis(self):
         print "Sample: ", self.path
@@ -190,8 +222,14 @@ class Record(object):
         print 'Not order after rax assignment\n',Counter([i.not_order_after_rax_assignment for i in self.Blocks])
         print 'Rax data\n',Counter([i.rax_data for i in self.Blocks])
         print 'Syscall name\n',Counter([i.syscall.name for i in self.Blocks])
-        print 'Args source distance(max)\n',Counter([i.args_source_distance for i in self.Blocks])
         print 'Args source last assignment(max)\n',Counter([i.args_last_assignment for i in self.Blocks])
+        print 'Entry\n',Counter([i.entry for i in self.Blocks])
+
+
+
+def print_txt(counter):
+    for (k,v) in counter.items():
+        print str(k),'\t',str(v)
 
 def fix_202_problem_in_fail():
     import os
@@ -240,5 +278,7 @@ def move_map_to(path):
 
 if __name__ == '__main__':
     import os, shutil
-
-    move_map_to('data/good/')
+    for i in os.listdir('data/good'):
+        if i.split('.')[-2] != 'outmap':
+            a = Record('data/good/'+i)
+            a.analysis()
