@@ -9,11 +9,16 @@ syscalls = []
 
 
 class CodeBlock(list):
-    def __init__(self, codes):
+    def __init__(self, codes, syscall_num=-1):
         '''codes should be list of str, each for a line'''
         for i in codes:
+            self.syscall_num = syscall_num
             self.append(Instruction(i))
-            if self[-1].unresolved: print "warn: unresolved instruction", self[-1].disas
+            if self[-1].unresolved:
+                if self[-1].disas:
+                    print "warn: unresolved instruction", self[-1].disas
+                else:
+                    print "warn: unresolved instruction Empty", self[-1]
 
     @property
     def last_not_order_type(self):
@@ -39,6 +44,11 @@ class CodeBlock(list):
 
     @property
     def rax_data(self):
+        eax = self.trace_back('eax')[0]
+        if Instruction.data_type(eax)!='immediate': return Instruction.data_type(eax)
+        if int(eax,16)!=self.syscall_num:
+            print 'Warn: wrong eax trace back. eax:', eax,'real:', self.syscall_num
+            print self
         return self.trace_back('eax')[0]
 
     @property
@@ -85,16 +95,30 @@ class CodeBlock(list):
         global syscalls
         if not syscalls:
             syscalls = SysCall.read_json('./syscall_list/syscalls.json')
-        if Instruction.data_type(self.rax_data) == 'immediate':
-            return syscalls[int(self.rax_data, 16)]
+        num = self.rax_data
+        if Instruction.data_type(num) == 'immediate':
+            try:
+                return syscalls[int(num, 16)]
+            except:
+                return SysCall(int(num, 16), name= 'Unknown')
+        else:
+            return SysCall(-1, name= 'Unknown')
 
     @property
     def args_source_distance(self):
-        return max([self.trace_back(i[0][1:])[1] for i in self.syscall.args])
+        a = [self.trace_back(i[0][1:])[1] for i in self.syscall.args]
+        if a:
+            return max(a)
+        else:
+            return None
 
     @property
     def args_last_assignment(self):
-        return max([self.last_assignment(i[0][1:]) for i in self.syscall.args])
+        a = [self.last_assignment(i[0][1:]) for i in self.syscall.args]
+        if a:
+            return max(a)
+        else:
+            return None
 
     @property
     def not_order_after_rax_assignment(self):
@@ -104,35 +128,76 @@ class CodeBlock(list):
                 _n += 1
         return _n
 
-Blocks = []
+    @classmethod
+    def read_file(cls, path):
+        Blocks = []
+        with open(path, 'r') as f:
 
-path ='data/statisticsyscall(1).out'
-with open(path, 'r') as f:
-    tmp = []
-    while True:
-        line = f.readline()
-        if line.startswith('ip'):
-            Blocks.append(CodeBlock(tmp))
             tmp = []
-        elif line == '':
-            Blocks.append(CodeBlock(tmp))
-            break
-        else:
-            tmp.append(line)
-    del Blocks[0]
+            syscall_num = -1
+            while True:
+                line = f.readline()
+                if line.startswith('ip'):
+                    Blocks.append(CodeBlock(tmp))
+                    Blocks[-1].syscall_num = syscall_num
+                    syscall_num = int(line.split(':')[-1])
+                    tmp = []
+                elif line == '':
+                    Blocks.append(CodeBlock(tmp))
+                    Blocks[-1].syscall_num = syscall_num
+                    break
+                else:
+                    tmp.append(line)
+            del Blocks[0]
+        return Blocks
 
 
-print "Sample: ", path
-print 'Block numbers',len(Blocks)
-print ''
+class Record(object):
+    def __init__(self, path):
+        self.path = path
+        self.Blocks = CodeBlock.read_file(path)
 
-print 'Last not order type\n',Counter([i.last_not_order_type for i in Blocks])
-print 'Last order length\n',Counter([i.last_order_len for i in Blocks])
-print 'Rax source\n',Counter([i.rax_source for i in Blocks])
-print 'Rax source distance\n',Counter([i.rax_source_distance for i in Blocks])
-print 'Rax last assignment\n',Counter([i.rax_last_assignment for i in Blocks])
-print 'Not order after rax assignment\n',Counter([i.not_order_after_rax_assignment for i in Blocks])
-print 'Rax data\n',Counter([i.rax_data for i in Blocks])
-print 'Syscall name\n',Counter([i.syscall.name for i in Blocks])
-print 'Args source distance(max)\n',Counter([i.args_source_distance for i in Blocks])
-print 'Args source last assignment(max)\n',Counter([i.args_last_assignment for i in Blocks])
+    def test_good(self):
+        print "Sample: ", self.path
+        print 'Block numbers',len(self.Blocks)
+        print ''
+
+        print 'Rax source\n',Counter([i.rax_source for i in self.Blocks])
+        print 'Syscall name\n',Counter([i.syscall.name for i in self.Blocks])
+        print 'Args source distance(max)\n',Counter([i.args_source_distance for i in self.Blocks])
+
+
+    def analysis(self):
+        print "Sample: ", self.path
+        print 'Block numbers',len(self.Blocks)
+        print ''
+
+        print 'Last not order type\n',Counter([i.last_not_order_type for i in self.Blocks])
+        print 'Last order length\n',Counter([i.last_order_len for i in self.Blocks])
+        print 'Rax source\n',Counter([i.rax_source for i in self.Blocks])
+        print 'Rax source distance\n',Counter([i.rax_source_distance for i in self.Blocks])
+        print 'Rax last assignment\n',Counter([i.rax_last_assignment for i in self.Blocks])
+        print 'Not order after rax assignment\n',Counter([i.not_order_after_rax_assignment for i in self.Blocks])
+        print 'Rax data\n',Counter([i.rax_data for i in self.Blocks])
+        print 'Syscall name\n',Counter([i.syscall.name for i in self.Blocks])
+        print 'Args source distance(max)\n',Counter([i.args_source_distance for i in self.Blocks])
+        print 'Args source last assignment(max)\n',Counter([i.args_last_assignment for i in self.Blocks])
+
+if __name__ == '__main__':
+    import os
+    test = ''
+
+    if test:
+        a = Record(test)
+        a.test()
+        exit()
+
+
+    for i in os.listdir('data'):
+        if not str(i).endswith('outmap.out'):
+            if str(i) not in ['good', 'ins', 'fail']:
+                print '\n\n\nTesting...', str(i)
+                a = Record('data/'+str(i))
+                a.test_good()
+                _ = raw_input('Good? Ins? Fail?')
+

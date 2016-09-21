@@ -21,6 +21,7 @@ registers = [
     'r15', 'r15d', 'r15w', 'r15b'
 ]
 
+not_move_list = ['cmp', 'test', 'neg', 'or', 'add', 'sar', 'bsr']
 
 class Instruction(str):
     '''
@@ -63,11 +64,11 @@ class Instruction(str):
     def unresolved(self):
         return not self.type in {'jmp', 'call', 'mov', 'or', 'xor', 'nop', 'test', 'syscall', 'pop', 'push', 'cld',
                                  'add', 'sub', 'cmp', 'and', 'lea', 'pushfq', 'lahf', 'set', 'shr', 'shl', 'neg', 'ret',
-                                 'not', 'mov', 'cdqe', 'cwde', 'cbw', 'dec'}
+                                 'not', 'mov', 'cdqe', 'cwde', 'cbw', 'dec', 'div', 'sar', 'bsf', 'rep', 'xchg', 'sbb'}
 
     @property
     def prefix(self):
-        if self.disas.split()[0] in ['bnd']:
+        if self.disas.split()[0] in ['bnd', 'lock']:
             return self.disas.split()
 
     @property
@@ -84,7 +85,10 @@ class Instruction(str):
 
     @property
     def disas(self):
-        return self.split(' ', 1)[1].strip()
+        try:
+            return self.split(' ', 1)[1].strip()
+        except:
+            return ''
 
     @property
     def ins(self):
@@ -102,6 +106,8 @@ class Instruction(str):
             return 'mov'
         elif self.ins.startswith('set'):
             return 'set'
+        elif self.ins.startswith('cmp'):
+            return 'cmp'
         else:
             return self.ins
 
@@ -112,11 +118,23 @@ class Instruction(str):
     @property
     def dest(self):
         if ',' in self.disas:
-            return self.split(',')[-1].strip()
+            if self.type == 'xchg':
+                if Instruction.data_type(self._src) == 'register':
+                    return self._src
+                else:
+                    return self.split(',')[-1].strip()
+            else:
+                return self.split(',')[-1].strip()
 
     @property
     def src(self):
         if ',' in self.disas:
+            if self.type == 'xchg':
+                if not Instruction.data_type(self._src) == 'register':
+                    return self._src
+                else:
+                    return self.split(',')[-1].strip()
+
             return ' '.join(self.disas.split(',')[0].split()[1:])
 
         return not self.type in ['jmp', 'call', 'ret']
@@ -134,7 +152,7 @@ class Instruction(str):
     @property
     def _src(self):
         if ',' in self.disas:
-            if self.type not in ['cmp', 'test', 'neg', 'or', 'add']:
+            if self.type not in not_move_list:
                 return self.split(',')[-1].split()[-1]
         if self.type == 'pop':
             return 'stack'
@@ -151,7 +169,7 @@ class Instruction(str):
     @property
     def dest(self):
         if ',' in self.disas:
-            if self.type not in ['cmp', 'test', 'neg', 'or', 'add']:
+            if self.type not in not_move_list:
                 return self.disas.split(',')[0].split()[-1]
         if self.type == 'push':
             return 'stack'
