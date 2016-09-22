@@ -1,0 +1,866 @@
+Sample: .usr.lib.gnome-terminal.gnome-terminal-server.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 1053
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.gvfs.gvfs-goa-volume-monitor.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 337
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.gnome-session.gnome-session-binary.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 1195
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.ibus.ibus-engine-simple.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 672
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.xorg.Xorg.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 343
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.rtkit.rtkit-daemon.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 165
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.dconf.dconf-service.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 269
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.evolution.evolution-source-registry.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 1767
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.evolution.evolution-calendar-factory-subprocess.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 3838
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.vmware-tools.sbin64.vmtoolsd.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 74
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.sbin.vmware-vmblock-fuse.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 74
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.x86_64-linux-gnu.deja-dup.deja-dup-monitor.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+Warn: wrong eax trace back. eax: 0xe real: 10
+Warn: wrong eax trace back. eax: 0x5 real: 60
+code loaded
+Block numbers 836
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.x86_64-linux-gnu.bamf.bamfdaemon.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 1017
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.sbin.rsyslogd.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 303
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.at-spi2-core.at-spi2-registryd.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 340
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .lib.systemd.systemd-logind.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 218
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.x86_64-linux-gnu.gconf.gconfd-2.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 332
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.bin.gnome-software.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 1149
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.x86_64-linux-gnu.indicator-keyboard.indicator-keyboard-service.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 1595
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.bin.gnome-keyring-daemon.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 512
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.unity-settings-daemon.unity-fallback-mount-helper.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 1027
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.bin.zeitgeist-daemon.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 249
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .lib.systemd.systemd.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 404
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.sbin.dnsmasq.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 240
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .sbin.agetty.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 173
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.sbin.thermald.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 286
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.gvfs.gvfsd-trash.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 343
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.sbin.acpid.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 32
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.x86_64-linux-gnu.hud.hud-service.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 1210
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.vmware-caf.pme.bin.ManagementAgentHost.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 74
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.bin.dbus-daemon.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 600
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.sbin.vmtoolsd.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 74
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .sbin.upstart.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+Warn: wrong eax trace back. eax: 0x2 real: 5
+Warn: wrong eax trace back. eax: 0x9 real: 3
+Warn: wrong eax trace back. eax: 0x5 real: 8
+Warn: wrong eax trace back. eax: 0x4 real: 46
+Warn: wrong eax trace back. eax: 0x0 real: 33
+Warn: wrong eax trace back. eax: 0x21 real: 95
+Warn: wrong eax trace back. eax: 0xd real: 14
+Warn: wrong eax trace back. eax: 0xd real: 14
+Warn: wrong eax trace back. eax: 0x0 real: 59
+Warn: wrong eax trace back. eax: 0x21 real: 107
+Warn: wrong eax trace back. eax: 0x8 real: 46
+Warn: wrong eax trace back. eax: 0x48 real: 46
+Warn: wrong eax trace back. eax: 0x5 real: 16
+Warn: wrong eax trace back. eax: 0xd real: 46
+Warn: wrong eax trace back. eax: 0xd real: 59
+code loaded
+Block numbers 16544
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.bin.ibus-daemon.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+Warn: wrong eax trace back. eax: 0xf real: 61
+Warn: wrong eax trace back. eax: 0xf real: 7
+code loaded
+Block numbers 1069
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.gvfs.gvfsd-network.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 343
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.x86_64-linux-gnu.indicator-messages.indicator-messages-service.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+Warn: wrong eax trace back. eax: 0xb real: 10
+code loaded
+Block numbers 284
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 589
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.gvfs.gvfsd-dnssd.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 416
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.sbin.lightdm.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 242
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.at-spi2-core.at-spi-bus-launcher.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 721
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.cups.notifier.dbus.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 340
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .lib.systemd.systemd-timesyncd.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 148
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.bin.whoopsie.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 516
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.sbin.NetworkManager.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 487
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.x86_64-linux-gnu.hud.window-stack-bridge.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 294
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.vmware-vgauth.VGAuthService.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 74
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.gvfs.gvfs-udisks2-volume-monitor.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 485
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.evolution.evolution-calendar-factory.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 4600
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.upower.upowerd.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+Warn: wrong eax trace back. eax: 0x1 real: 47
+code loaded
+Block numbers 9736
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .bin.sh.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 56
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.ibus.ibus-ui-gtk3.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 971
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .sbin.init.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 177
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.gvfs.gvfs-afc-volume-monitor.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+Warn: wrong eax trace back. eax: 0x0 real: 4
+code loaded
+Block numbers 544
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.x86_64-linux-gnu.indicator-printers.indicator-printers-service.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 1113
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.x86_64-linux-gnu.unity.unity-panel-service.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 958
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.policykit-1-gnome.polkit-gnome-authentication-agent-1.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 958
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.udisks2.udisksd.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+warn: unresolved instruction imul rax, rdx
+code loaded
+Block numbers 2682
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.bin.vmhgfs-fuse.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 74
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.sbin.cron.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 115
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.gvfs.gvfs-gphoto2-volume-monitor.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 1032
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.unity-settings-daemon.unity-settings-daemon.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 1045
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.gvfs.gvfs-mtp-volume-monitor.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 980
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.gvfs.gvfsd.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 343
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .lib.systemd.systemd-udevd.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 152
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .lib.systemd.systemd-journald.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 251
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.x86_64-linux-gnu.zeitgeist-fts.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 332
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.ibus.ibus-dconf.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 672
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.ibus.ibus-x11.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 869
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.bluetooth.bluetoothd.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 219
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.bin.pulseaudio.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 424
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.gvfs.gvfsd-metadata.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 282
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.colord.colord.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 496
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.gvfs.gvfsd-fuse.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 192
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Sample: .usr.lib.x86_64-linux-gnu.fwupd.fwupd.out
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+maps loaded.
+code loaded
+Block numbers 1177
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Total: 73803
+
+Last not order type
+
+syscall 	74
+jmp 	47493
+call 	21818
+None 	6
+ret 	4412
+
+Last order length
+
+1 	7
+2 	34867
+3 	8432
+4 	13531
+5 	431
+6 	2728
+7 	817
+8 	7666
+9 	85
+10 	4824
+11 	219
+12 	61
+None 	6
+15 	71
+17 	56
+19 	1
+13 	1
+
+Rax source
+
+register 	61
+stack 	2
+immediate 	73726
+memory 	14
+
+Rax source distance
+
+0 	2
+1 	63896
+2 	1118
+3 	697
+4 	2810
+5 	409
+6 	5
+7 	2
+8 	1
+9 	5
+10 	794
+11 	3982
+12 	13
+13 	9
+14 	4
+15 	1
+19 	55
+
+Rax last assignment
+
+0 	1
+1 	68016
+2 	432
+3 	184
+4 	6
+5 	295
+6 	4
+7 	4851
+9 	3
+10 	1
+11 	1
+12 	1
+None 	7
+14 	1
+
+Not order after rax assignment
+
+0 	73796
+1 	4
+2 	2
+3 	1
+
+Rax data
+
+0x3e 	20
+0x3d 	11
+0x3f 	19
+0x3c 	25
+0x3b 	91
+0x111 	194
+0x29 	177
+0x23 	1
+0x20 	100
+0x21 	149
+0x27 	2
+0x25 	705
+0x7d 	2
+0x34 	18
+0x37 	66
+0x36 	53
+0x31 	26
+0x30 	15
+0x33 	68
+0x32 	4
+0x11b 	11
+0x38 	128
+0x2b 	4
+0x2c 	92
+0xfd 	7
+0xfe 	14
+0x2f 	698
+0x2d 	60
+0x2e 	3895
+0x5c 	1
+0x5b 	1
+0x9 	7384
+0x8 	1091
+0x5f 	108
+0x3 	6170
+0x2 	7049
+0x1 	1569
+0x0 	9013
+0x7 	591
+0x6 	3888
+0x5 	5936
+0x4 	1090
+0x48 	1664
+0x106 	8
+0x107 	54
+0x4e 	219
+0x53 	23
+0x50 	4
+0x57 	6
+0x56 	1
+0x54 	1
+0xc 	833
+0xb 	486
+0xa 	5285
+0xf 	74
+0xe 	290
+0xd 	2631
+0x10f 	1
+0x2a 	150
+0x10b 	689
+0x59 	9
+0xf7 	335
+0xa0 	1
+0x7c 	1
+0x5a 	2
+0x68 	2
+0x66 	93
+0x65 	56
+0x62 	20
+0x63 	1
+0x61 	74
+0xca 	4160
+memory 	14
+0x6f 	1
+0x6d 	1
+0x6e 	2
+0x6b 	97
+0x6c 	14
+0x79 	15
+0x78 	24
+0x70 	52
+0x76 	24
+0xba 	16
+0x15 	3655
+0x14 	19
+0x9e 	74
+0x9d 	56
+0x96 	1
+0xea 	1
+0x1c 	25
+0x89 	132
+0x126 	5
+0x125 	7
+0x122 	81
+0x123 	4
+0x120 	26
+0x121 	3
+0x13e 	793
+stack 	2
+0x8f 	1
+0xe7 	58
+0xe5 	8
+0xe4 	1
+0x17 	353
+0x16 	98
+0xe9 	10
+register 	61
+0x12 	6
+0x10 	263
+0xda 	71
+0x95 	1
+0x93 	4
+0x92 	4
+0x91 	1
+
+Syscall name
+
+lseek 	1091
+accept4 	26
+readlinkat 	689
+uname 	19
+kill 	20
+timerfd_create 	11
+clock_getres 	8
+getdents 	219
+getresgid 	24
+mmap 	7384
+umask 	108
+arch_prctl 	74
+writev 	19
+fchmod 	1
+getpid 	2
+signalfd4 	3
+fstat 	5936
+dup2 	149
+read 	9013
+sched_get_priority_min 	4
+rt_sigreturn 	74
+getpgrp 	1
+capget 	2
+gettid 	16
+munmap 	486
+recvfrom 	60
+sched_get_priority_max 	4
+sendto 	92
+clock_gettime 	1
+epoll_create1 	4
+inotify_init 	7
+getresuid 	24
+connect 	150
+getsockname 	68
+close 	6170
+getgid 	2
+eventfd2 	81
+rt_sigprocmask 	290
+lstat 	3888
+statfs 	132
+access 	3655
+setsid 	52
+exit 	25
+newfstatat 	8
+set_tid_address 	71
+waitid 	335
+setrlimit 	1
+fcntl 	1664
+inotify_add_watch 	14
+getpeername 	18
+sysinfo 	1
+getsid 	1
+setsockopt 	53
+socket 	177
+pipe2 	7
+pwrite64 	6
+readlink 	9
+sendmsg 	3895
+epoll_ctl 	10
+rt_sigaction 	2631
+chmod 	2
+getpgid 	15
+brk 	833
+shutdown 	15
+poll 	591
+open 	7049
+select 	353
+getsockopt 	66
+exit_group 	58
+unknown 	870
+nanosleep 	1
+mkdir 	23
+rmdir 	1
+dup 	100
+listen 	4
+sched_getscheduler 	1
+set_robust_list 	194
+link 	1
+mlock 	1
+execve 	91
+wait4 	11
+chdir 	4
+madvise 	25
+inotify_init1 	5
+getrusage 	20
+setpgid 	1
+mprotect 	5285
+accept 	4
+prctl 	56
+sched_getparam 	1
+ppoll 	1
+write 	1569
+munlock 	1
+recvmsg 	698
+getrlimit 	74
+stat 	1090
+tgkill 	1
+getppid 	2
+clone 	128
+ioctl 	263
+getegid 	14
+unlink 	6
+unlinkat 	54
+getuid 	93
+bind 	26
+alarm 	705
+futex 	4160
+pipe 	98
+chown 	1
+geteuid 	97
+ptrace 	56
+
+Args source last assignment(max)
+
+1 	156
+2 	2224
+3 	15677
+4 	5435
+5 	3545
+6 	8517
+7 	10135
+8 	9968
+9 	3353
+10 	1426
+11 	1225
+12 	1414
+None 	3480
+14 	623
+15 	237
+16 	606
+17 	337
+18 	915
+19 	3288
+25 	1
+27 	1
+13 	1240
+
+Last instruction location
+
+/usr/lib/x86_64-linux-gnu/libgio-2.0.so.0 	4
+/lib64/ld-linux-x86-64.so.2 	57
+/sbin/upstart 	2
+/usr/lib/x86_64-linux-gnu/libicui18n.so.55 	1693
+No maps 	6449
+Not found 	24270
+/lib/x86_64-linux-gnu/libc.so.6 	39226
+/lib/x86_64-linux-gnu/libnih.so.1 	1
+/lib/x86_64-linux-gnu/libpthread.so.0 	1846
+/usr/lib/x86_64-linux-gnu/libavahi-client.so.3 	252
+/lib/x86_64-linux-gnu/libglib-2.0.so.0 	3
+
+Entry
+
+jz 0x7f4858920488 	1
+jbe 0x7ffc72dece8b 	1
+jz 0x7fd3d156f4be 	1
+bnd jmp r11 	1
+syscall 	73769
+jmp 0x564ad8cb8560 	1
+jmp qword ptr [rip+0x351bd2] 	1
+mov esi, dword ptr [rdi+0x70] 	1
+jmp qword ptr [rip+0x213aa2] 	1
+mov rdx, rdi 	1
+jmp 0x7f2b4da43f20 	1
+jz 0x564ad8cba14a 	1
+jz 0x7f4858362fc0 	1
+cdqe 	1
+push rbx 	1
+ret 	4
+call 0x7f72cec57810 	1
+mov rsi, rcx 	1
+jz 0x7f48588bed70 	1
+call rdx 	1
+mov eax, dword ptr [r14] 	1
+mov r10, r8 	1
+pcmpeqb xmm5, xmm6 	1
+nop dword ptr [rax], eax 	1
+mov edi, 0x1 	1
+rep cmpsb byte ptr [rsi], byte ptr [rdi] 	1
+jz 0x7fd3d154b9a0 	1
+jz 0x7f3742fdfe09 	1
+mov r8, r9 	1
+shr edx, cl 	1
+jz 0x7f45610e26d9 	1
+jnbe 0x7f456111c858 	1
+
+Entry_type
+
+shr 	1
+cdqe 	1
+syscall 	73769
+jmp 	15
+mov 	7
+ret 	4
+call 	2
+push 	1
+nop 	1
+rep 	1
+cmp 	1
