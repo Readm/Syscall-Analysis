@@ -37,6 +37,10 @@ class CodeBlock(list):
 
     def get_entry(self):
         try:
+            if self[-1].disas != 'syscall':
+                with open('reports/exceptions/entry.txt', 'a+') as f:
+                    f.write('path:' + self.path + '\n')
+                    f.writelines(self)
             return self[-1].disas
         except:
             with open('reports/exceptions/entry.txt', 'a+') as f:
@@ -129,9 +133,13 @@ class CodeBlock(list):
             try:
                 return syscalls[int(num, 16)]
             except:
-                return SysCall(int(num, 16), name='Unknown')
+                with open('reports/exceptions/unknown_syscall.txt', 'a+') as f:
+                    f.write('path:' + self.path + '\n')
+                    f.write('sysnum:'+str(self.rax_data)+'\n')
+                    f.writelines(self)
+                return SysCall(int(num, 16), name='Unknown', args=[])
         else:
-            return SysCall(-1, name='Unknown')
+            return SysCall(-1, name='Unknown', args=[])
 
     @property
     def args_source_distance(self):
@@ -151,14 +159,14 @@ class CodeBlock(list):
 
     def get_not_order_after_rax_assignment(self):
         _n = 0
-        if self.rax_not_match_recorded:
+        if self.rax_last_assignment is not None:
             for i in range(self.rax_last_assignment):
                 if not self[-1 - i].in_order:
                     _n += 1
         return _n
 
     @classmethod
-    def read_file(cls, path):
+    def read_file(cls, path, only_syscall = True):
         Blocks = []
         with open(path, 'r') as f:
 
@@ -187,6 +195,9 @@ class CodeBlock(list):
                 if line.startswith('ip'):
                     if tmp:
                         Blocks.append(CodeBlock(tmp, syscall_num, path, func, image))
+                        if only_syscall:
+                            if Blocks[-1].entry != 'syscall':
+                                del Blocks[-1]
                     syscall_num = int(line.split(':')[-1])
                     try:
                         func , _ , image = line.split('#')[2:5]
@@ -197,10 +208,14 @@ class CodeBlock(list):
                     tmp = []
                 elif line == '':
                     Blocks.append(CodeBlock(tmp, syscall_num, path, func, image))
-                    Blocks[-1].syscall_num = syscall_num
+                    if only_syscall:
+                        if Blocks[-1].entry != 'syscall':
+                            del Blocks[-1]
                     break
                 else:
                     tmp.append(line)
+
+
             # delete wrong block.
             wrong_block = list(wrong_block)
             for i in range(len(wrong_block)):
@@ -221,11 +236,10 @@ Cnoara  = Counter()
 Crd     = Counter()
 Csy     = Counter()
 Casla   = Counter()
-Clil    = Counter()
 Ce      = Counter()
 Cet     = Counter()
 Cfn     = Counter()
-Ci      = Counter
+Ci      = Counter()
 
 
 class Record(object):
@@ -256,7 +270,6 @@ class Record(object):
         Crd.update(Counter([i.rax_data for i in self.Blocks]))
         Csy.update(Counter([i.syscall.name for i in self.Blocks]))
         Casla.update(Counter([i.args_last_assignment for i in self.Blocks]))
-        Clil.update(Counter([i.last_instruction_location for i in self.Blocks]))
         Ce.update(Counter([i.entry for i in self.Blocks]))
         Cet.update(Counter([i.entry_type for i in self.Blocks]))
         Cfn.update(Counter([i.func_name for i in self.Blocks]))
@@ -322,8 +335,8 @@ def select_and_move(path):
 if __name__ == '__main__':
     import os, shutil
 
-    for i in os.listdir('data/good/'):
-        a = Record('data/good/' + i)
+    for i in os.listdir('data/new/'):
+        a = Record('data/new/' + i)
         a.analysis()
 
     print 'Total:', sum(Clnot.values())
@@ -345,8 +358,6 @@ if __name__ == '__main__':
     print_txt(Csy)
     print '\nArgs source last assignment(max)\n'
     print_txt(Casla)
-    print '\nLast instruction location\n'
-    print_txt(Clil)
     print '\nEntry\n'
     print_txt(Ce)
     print '\nEntry_type\n'
