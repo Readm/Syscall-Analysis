@@ -1,0 +1,210 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: chmod
+%rdi const char __user * filename
+stack 	3
+%rsi umode_t mode
+stack 	3
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: chown
+%rdi const char __user * filename
+stack 	1
+%rsi uid_t user
+stack 	1
+%rdx gid_t group
+stack 	1
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: fchmod
+%rdi unsigned int fd
+stack 	1
+%rsi umode_t mode
+stack 	1
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: fchown
+%rdi unsigned int fd
+%rsi uid_t user
+%rdx gid_t group
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: lchown
+%rdi const char __user * filename
+%rsi uid_t user
+%rdx gid_t group
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: link
+%rdi const char __user * oldname
+stack 	1
+%rsi const char __user * newname
+stack 	1
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: mknod
+%rdi const char __user * filename
+%rsi umode_t mode
+%rdx unsigned dev
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: mount
+%rdi char __user * dev_name
+register 	1
+%rsi char __user * dir_name
+register 	1
+%rdx char __user * type
+register 	1
+%r10 unsigned long flags
+stack 	1
+%r8 void __user * data
+stack 	1
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: open
+%rdi const char __user * filename
+register 	5473
+stack 	9
+memory 	707
+%rsi int flags
+register 	1179
+stack 	62
+immediate 	4948
+%rdx umode_t mode
+register 	4694
+stack 	55
+immediate 	1432
+memory 	8
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: rename
+%rdi const char __user * oldname
+%rsi const char __user * newname
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: symlink
+%rdi const char __user * oldname
+%rsi const char __user * newname
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: unlink
+%rdi const char __user * pathname
+stack 	1
+memory 	1
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: execve
+%rdi const char __user * filename
+register 	2
+memory 	3
+%rsi const char __user *const __user * argv
+register 	2
+stack 	3
+%rdx const char __user *const __user * envp
+stack 	1
+memory 	4
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: setfsgid
+%rdi gid_t gid
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: setfsuid
+%rdi uid_t uid
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: setgid
+%rdi gid_t gid
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: setgroups
+%rdi int gidsetsize
+%rsi gid_t __user * grouplist
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: setregid
+%rdi gid_t rgid
+%rsi gid_t egid
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: setresgid
+%rdi gid_t rgid
+%rsi gid_t egid
+%rdx gid_t sgid
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: setresuid
+%rdi uid_t ruid
+%rsi uid_t euid
+%rdx uid_t suid
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: setreuid
+%rdi uid_t ruid
+%rsi uid_t euid
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: setuid
+%rdi uid_t uid
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: accept
+%rdi int fd
+%rsi struct sockaddr __user * upeer_sockaddr
+%rdx int __user * upeer_addrlen
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: bind
+%rdi int fd
+register 	1
+stack 	2
+memory 	4
+%rsi struct sockaddr __user * umyaddr
+register 	4
+memory 	3
+%rdx int addrlen
+register 	1
+immediate 	4
+memory 	2
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: connect
+%rdi int fd
+register 	54
+stack 	6
+%rsi struct sockaddr __user * uservaddr
+register 	24
+stack 	31
+memory 	5
+%rdx int addrlen
+register 	4
+stack 	31
+immediate 	19
+memory 	6
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: listen
+%rdi int fd
+stack 	2
+%rsi int backlog
+immediate 	2
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: socket
+%rdi int family
+register 	8
+stack 	30
+immediate 	29
+%rsi int type
+register 	1
+stack 	30
+immediate 	30
+memory 	6
+%rdx int protocol
+register 	1
+stack 	30
+immediate 	36
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: socketpair
+%rdi int family
+immediate 	2
+%rsi int type
+immediate 	2
+%rdx int protocol
+immediate 	2
+%r10 int __user * usockvec
+stack 	2
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: init_module
+%rdi void __user * umod
+%rsi unsigned long len
+%rdx const char __user * uargs
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: create_module
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+syscall name: mprotect
+%rdi unsigned long start
+register 	14
+stack 	17
+memory 	5999
+%rsi size_t len
+register 	14
+stack 	17
+memory 	5999
+%rdx unsigned long prot
+register 	1
+stack 	16
+immediate 	6013

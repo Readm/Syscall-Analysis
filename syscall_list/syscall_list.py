@@ -5,6 +5,7 @@ import json
 
 __all__=['SysCall']
 
+key_list_counter = []       #key syscall list.
 
 class SysCall(object):
     def __init__(self, rax, name='', entry='', implementation='', args=[], architecture='amd64'):
@@ -67,6 +68,16 @@ class SysCall(object):
                 return return_lst
         except Exception, e:
             print e
+
+    @property
+    def is_key(self):
+        if not key_list_counter:
+            with open('key_syscall.txt') as f:
+                for line in f.readlines():
+                    key_list_counter.append(line.strip())
+        return self.name in key_list_counter
+
+
 
     @property
     def args_number(self):

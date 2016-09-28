@@ -7,7 +7,7 @@ from instruction import Instruction
 from syscall_list.syscall_list import SysCall
 
 __all__ = ['CodeBlock']
-syscalls = []
+syscalls = SysCall.read_json('./syscall_list/syscalls.json')
 
 
 class CodeBlock(list):
@@ -25,17 +25,11 @@ class CodeBlock(list):
                 else:
                     print "warn: unresolved instruction Empty", self[-1]
 
-        self.entry = self.get_entry()
-        self.entry_type = self.get_entry_type()
-        self.last_not_order_type = self.get_last_not_order_type()
-        self.last_order_len = self.get_last_order_len()
-        self.last_instruction = self.get_last_instruction()
-        self.rax_source = self.get_rax_source()
-        self.rax_data, self.rax_source_distance = self.get_rax_data_distance()
-        self.rax_last_assignment = self.get_rax_last_assignment()
-        self.not_order_after_rax_assignment = self.get_not_order_after_rax_assignment()
+        #for speed
+        self.rax_data, self.rax_source_distance = self.get_rax_data_distance
 
-    def get_entry(self):
+    @property
+    def entry(self):
         try:
             if self[-1].disas != 'syscall':
                 with open('reports/exceptions/entry.txt', 'a+') as f:
@@ -48,7 +42,8 @@ class CodeBlock(list):
                 f.writelines(self)
             return None
 
-    def get_entry_type(self):
+    @property
+    def entry_type(self):
         try:
             return self[-1].type
         except:
@@ -57,24 +52,27 @@ class CodeBlock(list):
                 f.writelines(self)
             return None
 
-    def get_last_not_order_type(self):
+    def last_not_order_type(self):
         for i in range(1, len(self)):
             if not self[-i - 1].in_order or self[-i - 1].type in ['syscall']:
                 return self[-i - 1].type
         return None
 
-    def get_last_order_len(self):  # Last_order_block_length include syscall
+    def last_order_len(self):  # Last_order_block_length include syscall
         for i in range(1, len(self)):
             if not self[-i - 1].in_order or self[-i - 1].type in ['syscall']:
                 return i
         return None
 
-    def get_last_instruction(self):
+    @property
+    def last_instruction(self):
         return self[-1].ins
 
-    def get_rax_source(self):
+    @property
+    def rax_source(self):
         return Instruction.data_type(self.trace_back('rax')[0])
 
+    @property
     def get_rax_data_distance(self):  # from 1, eg: mov eax, 1; syscall; return 1
         eax, distance = self.trace_back('eax')
         if Instruction.data_type(eax) != 'immediate': return Instruction.data_type(eax), distance
@@ -88,31 +86,33 @@ class CodeBlock(list):
                 self.rax_not_match_recorded = True
         return eax, distance
 
-    def get_rax_last_assignment(self):
+    def rax_last_assignment(self):
         return self.last_assignment('rax')
 
-    def trace_back(self, reg, fuzzy=True):  # only in regs route
+    def trace_back(self, reg, fuzzy=True, only_reg=True):  # only in regs route
+
         origin = reg
         i = -1
-        if fuzzy:
-            for i in range(len(self)):
-                if Instruction.reg_type(self[-1 - i].dest) == Instruction.reg_type(reg):
-                    reg = self[-1 - i].src
-                    if Instruction.data_type(reg) in ['stack', 'immediate', 'memory']:
-                        return reg, i
-                    if reg is None:
-                        print "Error: reg=", reg, self, i, origin
-                        break
-            return reg, i
+        if only_reg:
+            end_list = ['stack', 'immediate', 'memory']
         else:
-            for i in range(len(self)):
-                if self[-1 - i].dest == reg:
-                    reg = self[-1 - i].src
-                    if Instruction.data_type(reg) in ['stack', 'immediate', 'memory']:
-                        return reg, i
-                    if reg is None:
-                        print "Error: reg", self, i
-            return reg, i
+            end_list = ['immeidate']
+
+        if fuzzy:
+            def match(a, b):
+                return Instruction.reg_type(a) == Instruction.reg_type(b)
+        else:
+            def match(a, b):
+                return a == b
+        for i in range(len(self)):
+            if match(self[-1 - i].dest, reg):
+                reg = self[-1 - i].src
+                if Instruction.data_type(reg) in end_list:
+                    return reg, i
+                if reg is None:
+                    print "Error: reg=", reg, self, i, origin
+                    break
+        return reg, -1
 
     def last_assignment(self, reg, fuzzy=True):  # from 1, eg: mov eax, 1; syscall; return 1
         for i in range(len(self)):
@@ -125,9 +125,6 @@ class CodeBlock(list):
 
     @property
     def syscall(self):  # try to find out which syscall
-        global syscalls
-        if not syscalls:
-            syscalls = SysCall.read_json('./syscall_list/syscalls.json')
         num = self.rax_data
         if Instruction.data_type(num) == 'immediate':
             try:
@@ -157,7 +154,7 @@ class CodeBlock(list):
         else:
             return None
 
-    def get_not_order_after_rax_assignment(self):
+    def not_order_after_rax_assignment(self):
         _n = 0
         if self.rax_last_assignment is not None:
             for i in range(self.rax_last_assignment):
@@ -244,7 +241,6 @@ Ci      = Counter()
 
 class Record(object):
     def __init__(self, path):
-        print '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
         self.path = path
         self.Blocks = CodeBlock.read_file(path)
 
@@ -287,6 +283,24 @@ class Record(object):
         # print 'Args source last assignment(max)\n',Counter([i.args_last_assignment for i in self.Blocks])
         # print 'Last instruction location\n', Counter([i.last_instruction_location for i in self.Blocks])
         # print 'Entry\n',Counter([i.entry for i in self.Blocks])
+
+    def analysis_key_syscall_source(self):
+        #print 'Sample:', self.path
+        #print 'Block numbers', len(self.Blocks)
+        #print '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+        global key_list_counter
+
+        for block in self.Blocks:
+            if block.syscall.name in [i[0].name for i in key_list_counter]:
+                for arg in block.syscall.args:
+                    source, _ = block.trace_back(arg[0][1:], only_reg = False)
+                    source_type = Instruction.data_type(source)
+                    for i in key_list_counter:
+                        if i[0].name == block.syscall.name:
+                            i[1][block.syscall.args.index(arg)].update(Counter({source_type:1}))
+
+
+
 
 
 def print_txt(counter):
@@ -335,6 +349,43 @@ def select_and_move(path):
 if __name__ == '__main__':
     import os, shutil
 
+    key_list_counter = []
+
+    with open('syscall_list/key_syscall.txt') as f:
+        for line in f.readlines():
+            for i in syscalls:
+                if i.name == line.strip():
+                    key_list_counter.append((i, []))
+                    break
+            else:
+                key_list_counter.append((None,[]))
+
+    #prepare
+    for (a, b) in key_list_counter:
+        if a:
+            for _ in range(len(a.args)):
+                b.append(Counter())
+
+    for i in os.listdir('data/new/'):
+        a = Record('data/new/' + i)
+        a.analysis_key_syscall_source()
+
+    for (a, b) in key_list_counter:
+        print '++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+        print 'syscall name:', a.name
+        for n in range(len(b)):
+            for i in a.args[n]:
+                print i,
+            print ''
+            print_txt(b[n])
+
+
+
+
+
+
+
+''' full analysis
     for i in os.listdir('data/new/'):
         a = Record('data/new/' + i)
         a.analysis()
@@ -366,3 +417,4 @@ if __name__ == '__main__':
     print_txt(Cfn)
     print '\nImage\n'
     print_txt(Ci)
+'''

@@ -1,0 +1,994 @@
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fd
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fc
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fc
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fc
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fc
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fc
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fc
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fc
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fc
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fc
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fc
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fc
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fc
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fc
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
+path:data/new/.usr.lib.x86_64-linux-gnu.indicator-sound.indicator-sound-service.out
+0x00007fffe3b46292   jmp 0x7fffe3b07540
+0x00007fffe3b07540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe3102e60   cmp dword ptr [rip+0x2cd939], 0x0
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe34162c3   mov qword ptr [rsp+0x50], rax
+0x00007fffe34162c8   mov qword ptr [rsp+0xb0], rax
+0x00007fffe34162d0   mov qword ptr [rsp+0xb8], r14
+0x00007fffe34162d8   call 0x7fffe342d920
+0x00007fffe342d920   cmp rdi, 0x3fc
+0x00007fffe342d927   jbe 0x7fffe342d940
+0x00007fffe342d929   and rdi, 0xfffffffffffffffc
+0x00007fffe342d92d   test rdi, rdi
+0x00007fffe342d930   jz 0x7fffe342d954
+0x00007fffe342d932   movzx eax, byte ptr [rdi+0x14]
+0x00007fffe342d936   mov rax, qword ptr [rdi+rax*8+0x48]
+0x00007fffe342d93b   ret 
+0x00007fffe34162dd   lea rsi, ptr [rip-0x1934]
+0x00007fffe34162e4   cmp rax, 0x8
+0x00007fffe34162e8   mov rdi, qword ptr [r15+0x10]
+0x00007fffe34162ec   lea rax, ptr [rip-0x19a3]
+0x00007fffe34162f3   lea rdx, ptr [rsp+0xb0]
+0x00007fffe34162fb   cmovnz rsi, rax
+0x00007fffe34162ff   call 0x7fffe3404e40
+0x00007fffe3404e40   jmp qword ptr [rip+0x2474ea]
+path:data/new/.usr.lib.colord.colord.out
+0x00007fffe3142292   jmp 0x7fffe3103540
+0x00007fffe3103540   jmp qword ptr [rip+0x2f4f8a]
+0x00007fffe2bfde60   cmp dword ptr [rip+0x2cd939], 0x0
+0x00007fffe2bfde67   jnz 0x7fffe2bfde79
+0x00007fffe2bfde79   sub rsp, 0x8
+0x00007fffe2bfde7d   call 0x7fffe2c17810
+0x00007fffe2c17810   mov eax, dword ptr fs:[0x308]
+0x00007fffe2c17818   mov r11d, eax
+0x00007fffe2c1781b   or r11d, 0x2
+0x00007fffe2c1781f   cmp r11d, eax
+0x00007fffe2c17822   jz 0x7fffe2c1783b
+0x00007fffe2c17824   lock cmpxchg dword ptr fs:[0x308], r11d
+0x00007fffe2c1782f   jnz 0x7fffe2c17818
+0x00007fffe2c17831   and r11d, 0xffffffbb
+0x00007fffe2c17835   cmp r11d, 0xa
+0x00007fffe2c17839   jz 0x7fffe2c1783c
+0x00007fffe2c1783b   ret 
+0x00007fffe2bfde82   mov qword ptr [rsp], rax
+0x00007fffe2bfde86   mov eax, 0x7
+0x00007fffe2bfde8b   syscall 
+0x00007ffff7dee792   mov rsi, qword ptr [rsp+0x158]
+0x00007ffff7dee79a   mov rdx, qword ptr [rsp+0x150]
+0x00007ffff7dee7a2   mov rcx, qword ptr [rsp+0x148]
+0x00007ffff7dee7aa   mov rax, qword ptr [rsp+0x140]
+0x00007ffff7dee7b2   vmovdqa ymm0, ymmword ptr [rsp]
+0x00007ffff7dee7b7   vmovdqa ymm1, ymmword ptr [rsp+0x20]
+0x00007ffff7dee7bd   vmovdqa ymm2, ymmword ptr [rsp+0x40]
+0x00007ffff7dee7c3   vmovdqa ymm3, ymmword ptr [rsp+0x60]
+0x00007ffff7dee7c9   vmovdqa ymm4, ymmword ptr [rsp+0x80]
+0x00007ffff7dee7d2   vmovdqa ymm5, ymmword ptr [rsp+0xa0]
+0x00007ffff7dee7db   vmovdqa ymm6, ymmword ptr [rsp+0xc0]
+0x00007ffff7dee7e4   vmovdqa ymm7, ymmword ptr [rsp+0xe0]
+0x00007ffff7dee7ed   mov rsp, rbx
+0x00007ffff7dee7f0   mov rbx, qword ptr [rsp]
+0x00007ffff7dee7f4   add rsp, 0x18
+0x00007ffff7dee7f8   bnd jmp r11
+0x00007fffe2edc530   cmp dword ptr [rip+0x20be69], 0x0
+0x00007fffe2edc537   jnz 0x7fffe2edc549
+0x00007fffe2edc549   sub rsp, 0x8
+0x00007fffe2edc54d   call 0x7fffe2edc1a0
